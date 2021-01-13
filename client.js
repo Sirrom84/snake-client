@@ -1,3 +1,4 @@
+const { Server } = require('http');
 const net = require('net');
 
 /**
@@ -14,6 +15,11 @@ conn.on('data',(data) => {
   console.log(data);
 })
 
+conn.on('connect', (client) => {
+  console.log("Successfully connected to game server" );
+  console.log('Name: 78o');
+});
+
 
   return conn;
 }
@@ -21,3 +27,4 @@ conn.on('data',(data) => {
 module.exports = {
   connect
 }
+
