@@ -15,7 +15,7 @@ conn.on('data',(data) => {
   console.log(data);
 })
 
-conn.on('connect', (client) => {
+conn.on('connect', (Name) => {
   console.log("Successfully connected to game server" );
   console.log('Name: 78o');
 });
